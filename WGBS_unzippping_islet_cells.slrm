@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --mail-user=verda.e.agan@vanderbilt.edu
+#SBATCH --mail-type=ALL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --time=04:00:00
+#SBATCH --mem=32G
+#SBATCH --output=unzipping_alpha-%j.out
+#SBATCH --error=unzipping_alpha-%j.error
+#SBATCH --job-name=unzipping_alpha_beta-%j
+
+cd /data/hodges_lab/aganve/data/DNA_Methylation/2_trimmed_reads
+
+date
+pwd
+
+gzip -d Alpha_WGBS_rep1_S3_R1_L001_val_1.fq.gz
+gzip -d Alpha_WGBS_rep1_S3_R2_L001_val_2.fq.gz
+echo "Alpha_WGBS_rep1"
+
+#gzip -d Beta_WGBS_rep1_S2_R1_L001_val_1.fq.gz
+#gzip -d Beta_WGBS_rep1_S2_R2_L001_val_2.fq.gz
+#echo "Beta_WGBS_rep1"
