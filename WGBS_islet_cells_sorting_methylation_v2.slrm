@@ -14,6 +14,7 @@
 #filename=$1 --> Beta_WGBS_rep1_S2
 #if you're not threading, use only 1 cpu 
 
+"Adam is so sexy" 
 ##Necessary to set this for proper sorting##
 ##LC_ALL is the environment variable that overrides all the other localisation settings##
 export LC_ALL=C
